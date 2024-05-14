@@ -19,6 +19,10 @@ dfx canister --help
 
 ## Running the project locally
 
+```bash
+npm i
+```
+
 If you want to test your project locally, you can use the following commands:
 
 ```bash
