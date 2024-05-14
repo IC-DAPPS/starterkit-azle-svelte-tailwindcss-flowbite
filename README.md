@@ -1,6 +1,6 @@
-# baatcheet
+# starterkit-azle-svelte-tailwindcss-flowbite
 
-Welcome to your new baatcheet project and to the Internet Computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
+Welcome to your new starterkit-azle-svelte-tailwindcss-flowbite project and to the Internet Computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
 
 To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
 
@@ -12,7 +12,7 @@ To learn more before you start working with baatcheet, see the following documen
 If you want to start working on your project right away, you might want to try the following commands:
 
 ```bash
-cd baatcheet/
+cd starterkit-azle-svelte-tailwindcss-flowbite/
 dfx help
 dfx canister --help
 ```
@@ -29,7 +29,7 @@ dfx start --background
 dfx deploy
 ```
 
-Once the job completes, your application will be available at `http://localhost:4943?canisterId={asset_canister_id}`.
+Once the job completes, your application will be available at `http://localhost:8080?canisterId={asset_canister_id}`.
 
 If you have made changes to your backend canister, you can generate a new candid interface with
 
@@ -45,7 +45,7 @@ If you are making frontend changes, you can start a development server with
 npm start
 ```
 
-Which will start a server at `http://localhost:8080`, proxying API requests to the replica at port 4943.
+Which will start a server at `http://localhost:8080`, proxying API requests to the replica at port 8080.
 
 ### Note on frontend environment variables
 

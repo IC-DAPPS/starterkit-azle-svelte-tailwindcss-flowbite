@@ -1,25 +1,21 @@
 {
   "canisters": {
-    "baatcheet_backend": {
-      "build": "npx azle baatcheet_backend",
-      "candid": "src/baatcheet_backend/baatcheet_backend.did",
+    "backend": {
+      "build": "npx azle backend",
+      "candid": "src/backend/backend.did",
       "declarations": {
         "node_compatibility": true
       },
       "gzip": true,
-      "main": "src/baatcheet_backend/src/index.ts",
+      "main": "src/backend/src/index.ts",
       "type": "custom",
-      "wasm": ".azle/baatcheet_backend/baatcheet_backend.wasm"
+      "wasm": ".azle/backend/backend.wasm"
     },
-    "baatcheet_frontend": {
-      "dependencies": [
-        "baatcheet_backend"
-      ],
-      "source": [
-        "src/baatcheet_frontend/dist"
-      ],
+    "frontend": {
+      "dependencies": ["backend"],
+      "source": ["src/frontend/dist"],
       "type": "assets",
-      "workspace": "baatcheet_frontend"
+      "workspace": "frontend"
     },
     "internet_identity": {
       "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
@@ -40,5 +36,11 @@
     }
   },
   "output_env_file": ".env",
-  "version": 1
+  "version": 1,
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8080",
+      "type": "ephemeral"
+    }
+  }
 }

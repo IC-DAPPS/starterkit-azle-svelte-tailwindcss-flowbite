@@ -1,5 +1,5 @@
 <script>
-  import "../index.scss";
+  import { Alert } from "flowbite-svelte";
   import { backend } from "$lib/canisters";
 
   let greeting = "";
@@ -22,5 +22,12 @@
     <input id="name" alt="Name" type="text" />
     <button type="submit">Click Me!</button>
   </form>
-  <section id="greeting">{greeting}</section>
+  <section class=" bg-gray-300" id="greeting">{greeting}</section>
 </main>
+
+<div class="p-8">
+  <Alert>
+    <span class="font-medium">Info alert!</span>
+    Change a few things up and try submitting again. Good working
+  </Alert>
+</div>
