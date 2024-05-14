@@ -1,0 +1,44 @@
+{
+  "canisters": {
+    "baatcheet_backend": {
+      "build": "npx azle baatcheet_backend",
+      "candid": "src/baatcheet_backend/baatcheet_backend.did",
+      "declarations": {
+        "node_compatibility": true
+      },
+      "gzip": true,
+      "main": "src/baatcheet_backend/src/index.ts",
+      "type": "custom",
+      "wasm": ".azle/baatcheet_backend/baatcheet_backend.wasm"
+    },
+    "baatcheet_frontend": {
+      "dependencies": [
+        "baatcheet_backend"
+      ],
+      "source": [
+        "src/baatcheet_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "baatcheet_frontend"
+    },
+    "internet_identity": {
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "frontend": {},
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "type": "custom",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
